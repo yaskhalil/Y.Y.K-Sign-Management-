@@ -333,6 +333,35 @@
 
   .rider p { grid-column: 1; margin: 0; max-width: 60ch; font-size: .96rem; }
 
+  .rider .facility {
+    grid-column: 1 / -1;
+    max-width: none;
+    margin-top: var(--s1);
+    padding-top: var(--s3);
+    border-top: 1px solid var(--rail-soft);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--s1) var(--s3);
+  }
+  .rider .facility .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+  .rider .facility a {
+    /* underline, not border-bottom: the <a> is a flex item, so a border would
+       span the full item width once the address wraps */
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--rail);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+  .rider .facility a:hover { color: var(--blue-lit); text-decoration-color: var(--blue-lit); }
+
   .rail-note {
     margin: 0 0 0 var(--arm);
     padding: var(--s3) var(--s4);
@@ -561,6 +590,10 @@
             <h3>Post storage &amp; inventory management</h3>
             <p class="price">$8.50<span class="unit">/mo</span></p>
             <p>Warehouse storage for your posts, panels, and riders. We keep them clean and put them up when you need them.</p>
+            <p class="facility">
+              <span class="label">Facility</span>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=3780%20US-1%2C%20Monmouth%20Junction%2C%20NJ%2008852" target="_blank" rel="noopener">Extra Space Storage &middot; 3780 US&#8209;1, Monmouth Junction, NJ 08852</a>
+            </p>
           </article>
         </div>
 
