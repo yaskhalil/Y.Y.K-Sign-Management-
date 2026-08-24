@@ -15,5 +15,5 @@ light and dark. Open it directly in a browser to preview.
 - Contact card: https://blinq.me/MflRO5TIXOvQ?bs=db
 
 Rates: $50 standard post install (agent-owned post), $65 full package install
-(post rental included — first month free, then $8/mo), $15 rider swap, $10 site
+(post rental included, no monthly charge), $15 rider swap, $10 site
 visit, +$25 rush, +$20 out-of-zone, $8.50/mo storage.
