@@ -310,7 +310,7 @@
   .rider .qualifier { color: var(--text-faint); font-weight: 400; }
 
   .rider .price {
-    grid-column: 2; grid-row: 1;
+    grid-column: 2; grid-row: 1 / span 2;
     margin: 0;
     font-family: var(--mono);
     font-size: 1.28rem;
@@ -319,10 +319,19 @@
     white-space: nowrap;
     line-height: 1.35;
   }
+  .rider .price { text-align: right; }
   .rider .price .unit { font-size: .66em; color: var(--text-faint); }
+  .rider .price .then {
+    display: block;
+    margin-top: 5px;
+    font-size: .58em;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
   .rider .price .plus { color: var(--text-faint); }
 
-  .rider p { grid-column: 1 / -1; margin: 0; max-width: 60ch; font-size: .96rem; }
+  .rider p { grid-column: 1; margin: 0; max-width: 60ch; font-size: .96rem; }
 
   .rail-note {
     margin: 0 0 0 var(--arm);
@@ -415,7 +424,7 @@
     .logo { gap: var(--s3); }
     .logo svg { height: 88px; }
     .rider { padding: var(--s4) var(--s4); grid-template-columns: 1fr; row-gap: var(--s2); }
-    .rider .price { grid-column: 1; grid-row: auto; }
+    .rider .price { grid-column: 1; grid-row: auto; text-align: left; }
     .rider::before { top: 30px; }
     .rider::after { top: 25px; }
     .actions .btn { flex: 1 1 100%; justify-content: center; }
@@ -497,7 +506,7 @@
       <div class="section-head rise">
         <p class="eyebrow">Services</p>
         <h2>What we charge</h2>
-        <p>Three core services, two surcharges, and monthly storage. No trip fees.</p>
+        <p>Four core services, two surcharges, and monthly storage. No trip fees.</p>
       </div>
 
       <div class="rail">
@@ -508,6 +517,12 @@
             <h3>Standard post install <span class="qualifier">/ agent-owned post</span></h3>
             <p class="price">$50.00</p>
             <p>We deliver your post and panel, assemble it on site, and install it. Removal is included when the property sells.</p>
+          </article>
+
+          <article class="rider">
+            <h3>Full package install <span class="qualifier">/ post rental included</span></h3>
+            <p class="price">$65.00<span class="then">then $8/mo</span></p>
+            <p>We supply the post, deliver it, mount your panel, install it, and take it away when the property sells. For agents who would rather not buy and store their own posts. The first month of post rental is included; after that the rental is $8 a month until the post comes out.</p>
           </article>
 
           <article class="rider">

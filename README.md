@@ -14,5 +14,6 @@ light and dark. Open it directly in a browser to preview.
 - Scheduling: https://calendly.com/yaskhalil2006/30min
 - Contact card: https://blinq.me/MflRO5TIXOvQ?bs=db
 
-Rates come from the Y.Y.K service overview: $50 standard post install, $15 rider
-swap, $10 site visit, +$25 rush, +$20 out-of-zone, $8.50/mo storage.
+Rates: $50 standard post install (agent-owned post), $65 full package install
+(post rental included — first month free, then $8/mo), $15 rider swap, $10 site
+visit, +$25 rush, +$20 out-of-zone, $8.50/mo storage.
