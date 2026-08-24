@@ -1,8 +1,8 @@
 # Y.Y.K Sign Management
 
 Landing page for Y.Y.K Sign Management — real estate sign post installation,
-removals, rider swaps, and storage in Central New Jersey and the New River
-Valley / Roanoke.
+removals, rider swaps, and storage in Mercer, Middlesex, and Somerset County and the New River
+Valley / Roanoke. Anything outside those three counties takes the out-of-zone charge.
 
 `index.html` is the whole site: a single self-contained file with no build step
 and no dependencies beyond Google Fonts. The logo is inline SVG and adapts to
