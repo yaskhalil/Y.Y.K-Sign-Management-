@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20152%20192%22%3E%3Crect%20width%3D%22152%22%20height%3D%22192%22%20rx%3D%2226%22%20fill%3D%22%230f172a%22%2F%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M28%2030%20V166%22%20stroke%3D%22%23fff%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%2F%3E%3Crect%20x%3D%2260%22%20y%3D%2238%22%20width%3D%2270%22%20height%3D%2278%22%20rx%3D%229%22%20fill%3D%22%232563eb%22%20stroke%3D%22%23fff%22%20stroke-width%3D%225%22%2F%3E%3Crect%20x%3D%2272%22%20y%3D%2255%22%20width%3D%2246%22%20height%3D%229%22%20rx%3D%224.5%22%20fill%3D%22%23fff%22%2F%3E%3Crect%20x%3D%2272%22%20y%3D%2272%22%20width%3D%2232%22%20height%3D%227%22%20rx%3D%223.5%22%20fill%3D%22%23ffffffbf%22%2F%3E%3Crect%20x%3D%2272%22%20y%3D%2289%22%20width%3D%2246%22%20height%3D%2215%22%20rx%3D%225%22%20fill%3D%22%234d8bf5%22%2F%3E%3Cpath%20d%3D%22M28%2034%20H120%22%20stroke%3D%22%23fff%22%20stroke-width%3D%2212%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y.Y.K Sign Management">
+<meta property="og:description" content="Real estate sign post installation, removal, rider swaps, and storage in Central New Jersey and the New River Valley. Standard turnaround 24 to 72 hours.">
+<meta name="twitter:card" content="summary">
+<title>Y.Y.K Sign Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Real estate sign post installation, removal, rider swaps, and storage in Central New Jersey and the New River Valley. Standard turnaround 24 to 72 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+
+<style>
+  /* ---------- tokens: light is the base set ---------- */
+  :root {
+    --ground:      #f6f8fc;
+    --ground-deep: #edf1f8;
+    --panel:       #ffffff;
+    --rail:        #c6d2e4;
+    --rail-soft:   #dde4f0;
+    --blue:        #2563eb;
+    --blue-lit:    #1d4ed8;
+    --blue-haze:   rgba(37,99,235,.07);
+    --ink:         #0f172a;
+    --text:        #4c5c77;
+    --text-faint:  #78879f;
+    --grid-line:   rgba(15,23,42,.05);
+    --hero-glow:   rgba(37,99,235,.06);
+
+    --sign-bar-1:  #ffffff;
+    --sign-bar-2:  rgba(255,255,255,.72);
+    --sign-bar-3:  #4d8bf5;
+
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body:    "Public Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    /* spacing scale — every gap below comes from here */
+    --s1: 6px;  --s2: 10px; --s3: 16px; --s4: 24px;
+    --s5: 36px; --s6: 56px; --s7: 88px;
+
+    --arm: 46px;      /* distance from post to panel */
+    --shell: 1060px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #0f172a;
+      --ground-deep: #0a1020;
+      --panel:       #16213c;
+      --rail:        #2e3f61;
+      --rail-soft:   #1e2a45;
+      --blue:        #2563eb;
+      --blue-lit:    #5b9cff;
+      --blue-haze:   rgba(91,156,255,.10);
+      --ink:         #f2f6fc;
+      --text:        #9aa8c0;
+      --text-faint:  #71819e;
+      --grid-line:   rgba(91,156,255,.07);
+      --hero-glow:   rgba(91,156,255,.09);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:      #0f172a;
+    --ground-deep: #0a1020;
+    --panel:       #16213c;
+    --rail:        #2e3f61;
+    --rail-soft:   #1e2a45;
+    --blue:        #2563eb;
+    --blue-lit:    #5b9cff;
+    --blue-haze:   rgba(91,156,255,.10);
+    --ink:         #f2f6fc;
+    --text:        #9aa8c0;
+    --text-faint:  #71819e;
+    --grid-line:   rgba(91,156,255,.07);
+    --hero-glow:   rgba(91,156,255,.09);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--blue-lit); }
+
+  :focus-visible { outline: 2px solid var(--blue-lit); outline-offset: 3px; border-radius: 3px; }
+
+  .shell { width: 100%; max-width: var(--shell); margin-inline: auto; padding-inline: var(--s4); }
+
+  h1, h2, h3 { font-family: var(--display); color: var(--ink); margin: 0; text-wrap: balance; }
+
+  .eyebrow {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--blue-lit);
+  }
+
+  /* ================= LOGO ================= */
+  .logo { display: flex; align-items: center; gap: var(--s4); }
+  .logo svg { width: auto; height: 126px; flex: none; }
+
+  .wordmark { display: flex; flex-direction: column; gap: var(--s2); min-width: 0; }
+  .wordmark .yyk {
+    font-family: var(--display);
+    font-size: clamp(2rem, 6.2vw, 3rem);
+    font-weight: 600;
+    letter-spacing: .1em;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .wordmark .sub {
+    font-family: var(--display);
+    font-size: clamp(.95rem, 2.9vw, 1.4rem);
+    font-weight: 600;
+    letter-spacing: .16em;
+    line-height: 1;
+    color: var(--blue-lit);
+    text-transform: uppercase;
+  }
+  .wordmark .strip {
+    margin-top: var(--s1);
+    padding-top: var(--s2);
+    border-top: 1px solid var(--rail);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  /* ================= HERO ================= */
+  .hero {
+    background:
+      radial-gradient(110% 80% at 10% 0%, var(--hero-glow) 0%, transparent 64%),
+      var(--ground);
+    border-bottom: 1px solid var(--rail-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 66px 66px;
+    -webkit-mask-image: radial-gradient(100% 78% at 18% 8%, #000, transparent 70%);
+            mask-image: radial-gradient(100% 78% at 18% 8%, #000, transparent 70%);
+    pointer-events: none;
+  }
+  .hero > .shell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--s6);
+    padding-block: var(--s6) var(--s5);
+  }
+
+  .hero-copy { display: flex; flex-direction: column; gap: var(--s4); }
+
+  h1 {
+    font-size: clamp(2rem, 5.2vw, 3.3rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -.022em;
+    max-width: 20ch;
+  }
+  h1 em { font-style: normal; color: var(--blue-lit); }
+
+  .lede { margin: 0; max-width: 54ch; font-size: 1.05rem; }
+
+  .actions { display: flex; flex-wrap: wrap; gap: var(--s2); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s2);
+    padding: 14px 22px;
+    border-radius: 4px;
+    font-family: var(--display);
+    font-size: .93rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .16s ease, background-color .16s ease, border-color .16s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-primary:hover { background: #1d54d6; }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--rail); }
+  .btn-ghost:hover { border-color: var(--blue-lit); background: var(--blue-haze); }
+  .btn .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s2) var(--s5);
+    padding: var(--s3) var(--s4);
+    background: var(--panel);
+    border: 1px solid var(--rail-soft);
+    border-left: 3px solid var(--blue);
+    border-radius: 3px;
+  }
+  .facts span {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s2);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .facts span::before {
+    content: "";
+    flex: none;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--blue-lit);
+  }
+
+  /* ================= SECTIONS ================= */
+  .section { padding-block: var(--s7); border-bottom: 1px solid var(--rail-soft); }
+  .section-deep { background: var(--ground-deep); }
+
+  .section-head { display: flex; flex-direction: column; gap: var(--s3); margin-bottom: var(--s6); max-width: 58ch; }
+  .section-head h2 { font-size: clamp(1.55rem, 3.4vw, 2.15rem); font-weight: 700; letter-spacing: -.018em; line-height: 1.14; }
+  .section-head p { margin: 0; }
+
+  /* ================= POST RAIL ================= */
+  .rail { position: relative; display: flex; flex-direction: column; gap: var(--s5); }
+  .rail::before {
+    content: "";
+    position: absolute;
+    left: 9px; top: 2px; bottom: 22px;
+    width: 3px;
+    border-radius: 2px;
+    background: linear-gradient(to bottom, var(--rail) 0%, var(--rail) 86%, transparent 100%);
+  }
+  .rail::after {
+    content: "";
+    position: absolute;
+    left: 3px; bottom: 12px;
+    width: 15px; height: 3px;
+    border-radius: 2px;
+    background: var(--rail);
+  }
+
+  .group { display: flex; flex-direction: column; gap: var(--s3); }
+
+  .group-label {
+    margin: 0 0 var(--s1) var(--arm);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    font-weight: 400;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+  .group-label b { color: var(--blue-lit); font-weight: 400; }
+
+  .rider {
+    position: relative;
+    margin-left: var(--arm);
+    padding: var(--s4) var(--s5) var(--s4) var(--s4);
+    background: var(--panel);
+    border: 1px solid var(--rail-soft);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    column-gap: var(--s5);
+    row-gap: var(--s2);
+    align-items: baseline;
+  }
+  .rider::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--arm) + 10px);
+    top: 34px;
+    width: calc(var(--arm) - 10px);
+    height: 3px;
+    background: var(--rail);
+  }
+  .rider::after {
+    content: "";
+    position: absolute;
+    left: -5px; top: 29px;
+    width: 9px; height: 13px;
+    border-radius: 2px;
+    background: var(--blue);
+  }
+
+  .rider h3 { grid-column: 1; font-size: 1.12rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.35; }
+  .rider .qualifier { color: var(--text-faint); font-weight: 400; }
+
+  .rider .price {
+    grid-column: 2; grid-row: 1;
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 1.28rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--blue-lit);
+    white-space: nowrap;
+    line-height: 1.35;
+  }
+  .rider .price .unit { font-size: .66em; color: var(--text-faint); }
+  .rider .price .plus { color: var(--text-faint); }
+
+  .rider p { grid-column: 1 / -1; margin: 0; max-width: 60ch; font-size: .96rem; }
+
+  .rail-note {
+    margin: 0 0 0 var(--arm);
+    padding: var(--s3) var(--s4);
+    border: 1px dashed var(--rail);
+    border-radius: 4px;
+    font-size: .94rem;
+  }
+  .rail-note strong { color: var(--ink); font-weight: 600; }
+
+  /* ================= CHECKLIST ================= */
+  .checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    margin: 0;
+    background: var(--rail-soft);
+    border: 1px solid var(--rail-soft);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .check { display: flex; flex-direction: column; gap: var(--s2); padding: var(--s4); background: var(--panel); }
+  .check dt {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--blue-lit);
+  }
+  .check dd { margin: 0; font-size: .96rem; color: var(--ink); }
+
+  /* ================= CONTACT ================= */
+  .contact { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: var(--s6); align-items: center; }
+  .phone-block { display: flex; flex-direction: column; gap: var(--s3); }
+  .phone {
+    font-family: var(--mono);
+    font-size: clamp(1.7rem, 5vw, 2.5rem);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -.045em;
+    line-height: 1.1;
+    white-space: nowrap;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .phone:hover { color: var(--blue-lit); }
+  .phone-block p { margin: 0; max-width: 38ch; }
+
+  .contact-links { display: flex; flex-direction: column; gap: var(--s2); }
+  .link-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s4);
+    padding: var(--s4);
+    background: var(--panel);
+    border: 1px solid var(--rail-soft);
+    border-left: 3px solid var(--blue);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border-color .16s ease, transform .16s ease;
+  }
+  .link-card:hover { border-color: var(--rail); border-left-color: var(--blue-lit); transform: translateX(3px); }
+  .link-card > div { display: flex; flex-direction: column; gap: 2px; }
+  .link-card strong { font-family: var(--display); font-size: 1rem; font-weight: 600; color: var(--ink); }
+  .link-card span { font-size: .9rem; color: var(--text); }
+  .link-card .arrow { flex: none; font-family: var(--mono); font-size: 1.1rem; color: var(--blue-lit); }
+
+  /* ================= FOOTER ================= */
+  footer { padding-block: var(--s5); }
+  .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s4) var(--s5); }
+  .foot-brand { display: flex; align-items: center; gap: var(--s3); }
+  .foot-brand svg { height: 52px; width: auto; flex: none; }
+  .foot-brand div { display: flex; flex-direction: column; gap: 2px; }
+  .foot-name { font-family: var(--display); font-weight: 600; letter-spacing: .06em; color: var(--ink); }
+  .foot-area { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+  .foot-links { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s4); font-family: var(--mono); font-size: 12.5px; }
+  .foot-links a { color: var(--text); text-decoration: none; }
+  .foot-links a:hover { color: var(--blue-lit); }
+
+  /* ================= MOBILE DOCK ================= */
+  .dock { display: none; }
+
+  @media (max-width: 900px) {
+    .contact { grid-template-columns: 1fr; gap: var(--s5); }
+  }
+
+  @media (max-width: 680px) {
+    :root { --arm: 28px; --s6: 40px; --s7: 56px; }
+    body { font-size: 16px; }
+    .logo { gap: var(--s3); }
+    .logo svg { height: 88px; }
+    .rider { padding: var(--s4) var(--s4); grid-template-columns: 1fr; row-gap: var(--s2); }
+    .rider .price { grid-column: 1; grid-row: auto; }
+    .rider::before { top: 30px; }
+    .rider::after { top: 25px; }
+    .actions .btn { flex: 1 1 100%; justify-content: center; }
+    footer { padding-bottom: 96px; }
+    .dock {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s2);
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 20;
+      padding: 12px var(--s3) calc(12px + env(safe-area-inset-bottom));
+      background: var(--ground-deep);
+      border-top: 1px solid var(--rail-soft);
+    }
+    .dock .btn { justify-content: center; padding: 13px 12px; }
+  }
+
+  @media (max-width: 420px) {
+    .logo { flex-direction: column; align-items: flex-start; gap: var(--s3); }
+  }
+
+  /* ================= MOTION ================= */
+  .rise { opacity: 0; transform: translateY(12px); }
+  .rise.in { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s cubic-bezier(.22,.9,.3,1); }
+  @media (prefers-reduced-motion: reduce) {
+    .rise, .rise.in { opacity: 1; transform: none; transition: none; }
+    .btn:hover, .link-card:hover { transform: none; }
+    * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="shell">
+
+    <div class="logo">
+      <svg viewBox="0 0 152 192" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Y.Y.K Sign Management">
+        <path d="M13 11 V181" stroke="var(--ink)" stroke-width="11" stroke-linecap="round"/>
+        <rect x="52" y="18" width="86" height="96" rx="10" fill="var(--blue)" stroke="var(--ink)" stroke-width="5"/>
+        <rect x="66" y="38" width="58" height="11" rx="5.5" fill="var(--sign-bar-1)"/>
+        <rect x="66" y="58" width="40" height="9" rx="4.5" fill="var(--sign-bar-2)"/>
+        <rect x="66" y="78" width="58" height="20" rx="6" fill="var(--sign-bar-3)"/>
+        <path d="M13 15 H126" stroke="var(--ink)" stroke-width="11" stroke-linecap="round"/>
+        <path d="M13 46 L44 16" stroke="var(--ink)" stroke-width="5.5" stroke-linecap="round"/>
+      </svg>
+
+      <div class="wordmark">
+        <span class="yyk">Y.Y.K</span>
+        <span class="sub">Sign Management</span>
+        <span class="strip">Post installation &middot; Removals &middot; Storage</span>
+      </div>
+    </div>
+
+    <div class="hero-copy">
+      <h1>Sign posts in the ground in <em>24 to 72 hours</em>.</h1>
+      <p class="lede">We install, service, and remove real estate sign posts across Central New Jersey and the New River Valley. Flat rates, and a photo of the finished job every time.</p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+19083407527">Call <span class="num">(908) 340-7527</span></a>
+        <a class="btn btn-ghost" href="https://calendly.com/yaskhalil2006/30min" target="_blank" rel="noopener">Book a 30-minute call</a>
+        <a class="btn btn-ghost" href="https://blinq.me/MflRO5TIXOvQ?bs=db" target="_blank" rel="noopener">Save my contact card</a>
+      </div>
+    </div>
+
+    <div class="facts">
+      <span>24 to 72 hour turnaround</span>
+      <span>Photo on every job</span>
+      <span>Removal included at sale</span>
+    </div>
+
+  </div>
+</header>
+
+<main>
+  <section class="section" id="rates">
+    <div class="shell">
+      <div class="section-head rise">
+        <p class="eyebrow">Services</p>
+        <h2>What we charge</h2>
+        <p>Three core services, two surcharges, and monthly storage. No trip fees.</p>
+      </div>
+
+      <div class="rail">
+        <div class="group rise">
+          <h3 class="group-label">Core rate</h3>
+
+          <article class="rider">
+            <h3>Standard post install <span class="qualifier">/ agent-owned post</span></h3>
+            <p class="price">$50.00</p>
+            <p>We deliver your post and panel, assemble it on site, and install it. Removal is included when the property sells.</p>
+          </article>
+
+          <article class="rider">
+            <h3>Rider swap</h3>
+            <p class="price">$15.00</p>
+            <p>A site visit to add, swap, or pull a status rider on a post already in the ground. Under Contract, Price Reduced, Sold, or a custom rider.</p>
+          </article>
+
+          <article class="rider">
+            <h3>Site visit / post maintenance</h3>
+            <p class="price">$10.00</p>
+            <p>Adjust hardware, re-anchor a post after wind, add a brochure box or solar light, or check on reported damage.</p>
+          </article>
+        </div>
+
+        <div class="group rise">
+          <h3 class="group-label">Add-ons &mdash; <b>added to the base rate</b></h3>
+
+          <article class="rider">
+            <h3>Rush delivery <span class="qualifier">/ under 24 hours</span></h3>
+            <p class="price"><span class="plus">+</span>$25.00</p>
+            <p>Installation within 24 hours of the order instead of the standard 24 to 72 hour window.</p>
+          </article>
+
+          <article class="rider">
+            <h3>Out-of-zone <span class="qualifier">/ New Jersey &amp; outlying areas</span></h3>
+            <p class="price"><span class="plus">+</span>$20.00</p>
+            <p>A distance charge for addresses outside the primary Montgomery County radius, including Princeton, Newark, and Trenton.</p>
+          </article>
+        </div>
+
+        <div class="group rise">
+          <h3 class="group-label">Monthly</h3>
+
+          <article class="rider">
+            <h3>Post storage &amp; inventory management</h3>
+            <p class="price">$8.50<span class="unit">/mo</span></p>
+            <p>Warehouse storage for your posts, panels, and riders. We keep them clean and put them up when you need them.</p>
+          </article>
+        </div>
+
+        <p class="rail-note rise"><strong>Rush and out-of-zone rates are added to the base service rate.</strong> If you run a high listing volume, ask for a written quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-deep" id="ordering">
+    <div class="shell">
+      <div class="section-head rise">
+        <p class="eyebrow">Placing an order</p>
+        <h2>What we need to book it</h2>
+        <p>Have this ready when you call and we can put the install on the calendar during that call.</p>
+      </div>
+
+      <dl class="checklist rise">
+        <div class="check"><dt>Agent</dt><dd>Your name, brokerage or team, phone, and email.</dd></div>
+        <div class="check"><dt>Property</dt><dd>Full address with city and zip, plus where in the yard you want the post.</dd></div>
+        <div class="check"><dt>Service</dt><dd>Which service you need and the date you want it done.</dd></div>
+        <div class="check"><dt>Storage</dt><dd>Store the post with us at $8.50 a month, or leave it at the property.</dd></div>
+        <div class="check"><dt>Site safety</dt><dd>Any sprinkler lines or invisible fence we need to dig around.</dd></div>
+        <div class="check"><dt>Access</dt><dd>Gate codes or anything else we need to reach the spot.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="shell">
+      <div class="contact">
+        <div class="phone-block rise">
+          <p class="eyebrow">Get in touch</p>
+          <a class="phone" href="tel:+19083407527">(908) 340-7527</a>
+          <p>Call or text to schedule. Book a call if you want to go over listing volume, a team account, or long-term storage.</p>
+        </div>
+
+        <div class="contact-links rise">
+          <a class="link-card" href="https://calendly.com/yaskhalil2006/30min" target="_blank" rel="noopener">
+            <div><strong>Book a 30-minute call</strong><span>Pick a time on Calendly</span></div>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="link-card" href="https://blinq.me/MflRO5TIXOvQ?bs=db" target="_blank" rel="noopener">
+            <div><strong>Save my contact card</strong><span>Digital business card on Blinq</span></div>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="link-card" href="tel:+19083407527">
+            <div><strong>Call or text</strong><span>(908) 340-7527</span></div>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell foot">
+    <div class="foot-brand">
+      <svg viewBox="0 0 152 192" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M13 11 V181" stroke="var(--ink)" stroke-width="11" stroke-linecap="round"/>
+        <rect x="52" y="18" width="86" height="96" rx="10" fill="var(--blue)" stroke="var(--ink)" stroke-width="5"/>
+        <rect x="66" y="38" width="58" height="11" rx="5.5" fill="var(--sign-bar-1)"/>
+        <rect x="66" y="58" width="40" height="9" rx="4.5" fill="var(--sign-bar-2)"/>
+        <rect x="66" y="78" width="58" height="20" rx="6" fill="var(--sign-bar-3)"/>
+        <path d="M13 15 H126" stroke="var(--ink)" stroke-width="11" stroke-linecap="round"/>
+        <path d="M13 46 L44 16" stroke="var(--ink)" stroke-width="5.5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <span class="foot-name">Y.Y.K SIGN MANAGEMENT</span>
+        <span class="foot-area">Central New Jersey &middot; New River Valley / Roanoke</span>
+      </div>
+    </div>
+    <nav class="foot-links">
+      <a href="tel:+19083407527">(908) 340-7527</a>
+      <a href="https://calendly.com/yaskhalil2006/30min" target="_blank" rel="noopener">Schedule</a>
+      <a href="https://blinq.me/MflRO5TIXOvQ?bs=db" target="_blank" rel="noopener">Contact card</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn btn-primary" href="tel:+19083407527">Call now</a>
+  <a class="btn btn-ghost" href="https://calendly.com/yaskhalil2006/30min" target="_blank" rel="noopener">Schedule</a>
+</div>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.rise');
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      items.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
